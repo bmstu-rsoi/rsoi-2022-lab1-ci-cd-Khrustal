@@ -10,7 +10,7 @@ spring:
     generate-ddl: false
     show-sql: true
   datasource:
-    url: jdbc:postgresql://db:5432/postgres
-    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: Bosporez3
     username: postgres
     driver-class-name: org.postgresql.Driver

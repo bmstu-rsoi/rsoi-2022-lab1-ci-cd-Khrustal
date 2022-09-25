@@ -48,10 +48,13 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public ResponseEntity<?> updatePerson(Long id, Person person) {
         if(person == null || id == null || person.isEmpty()) return ResponseEntity.badRequest().body(new ValidationErrorResponse());
-        if(personRepository.existsById(id)) {
-            person.setId(id);
-            Person savedPerson = personRepository.save(person);
-            return ResponseEntity.ok(savedPerson);
+        Person dbPerson = personRepository.findById(id).orElse(null);
+        if(dbPerson != null) {
+            if(person.getName() != null) dbPerson.setName(person.getName());
+            if(person.getAge() != null) dbPerson.setAge(person.getAge());
+            if(person.getWork() != null) dbPerson.setWork(person.getWork());
+            if(person.getAddress() != null) dbPerson.setAddress(person.getAddress());
+            return ResponseEntity.ok(personRepository.save(dbPerson));
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorResponse("Record not found"));
     }
