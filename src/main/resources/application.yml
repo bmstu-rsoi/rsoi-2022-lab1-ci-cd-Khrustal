@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+    open-in-view: false
+    generate-ddl: false
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres
+    password: postgres
+    username: postgres
+    driver-class-name: org.postgresql.Driver
