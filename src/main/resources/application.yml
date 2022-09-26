@@ -12,3 +12,5 @@ spring:
     password: 38af0dd7400cbcc0f30dc6bcba473df30b643ceb558cfadfb72ca69a2e2a98a1
     username: beqrvklfuhntgd
     driver-class-name: org.postgresql.Driver
+server:
+  port: ${PORT:5000}
