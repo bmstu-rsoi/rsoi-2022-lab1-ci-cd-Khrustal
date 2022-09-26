@@ -20,7 +20,7 @@ jobs:
         with:
           java-version: 1.18
       - name: Maven Package
-        run: mvn -B clean package -DskipTests
+        run: mvn -B clean package
 
       - name: Deploy
         uses: akhileshns/heroku-deploy@v3.12.12
