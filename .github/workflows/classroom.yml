@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build project
-        uses: LucaFeger/action-maven-cli@1.1.0
+        uses: PrajjawalBanati/Build_Management_Using_Maven@0.0.1
 
       - name: Deploy
         uses: akhileshns/heroku-deploy@v3.12.12
