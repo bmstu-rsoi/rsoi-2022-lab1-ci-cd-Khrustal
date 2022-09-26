@@ -10,7 +10,7 @@ spring:
     generate-ddl: false
     show-sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/persons
-    password: test
-    username: program
+    url: jdbc:postgres://beqrvklfuhntgd:38af0dd7400cbcc0f30dc6bcba473df30b643ceb558cfadfb72ca69a2e2a98a1@ec2-18-209-78-11.compute-1.amazonaws.com:5432/d81i6vai6dip58
+    password: 38af0dd7400cbcc0f30dc6bcba473df30b643ceb558cfadfb72ca69a2e2a98a1
+    username: beqrvklfuhntgd
     driver-class-name: org.postgresql.Driver
