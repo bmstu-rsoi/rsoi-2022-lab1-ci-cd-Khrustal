@@ -16,6 +16,8 @@ jobs:
           fetch-depth: 0
 
       - name: Build project
+        with:
+          java-version: '18'
         run: mvn clean install
 
       - name: Deploy
