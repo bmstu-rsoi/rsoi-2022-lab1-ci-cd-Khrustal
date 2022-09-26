@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build project
-        uses: PrajjawalBanati/Build_Management_Using_Maven@0.0.1
+        run: mvn clean install
 
       - name: Deploy
         uses: akhileshns/heroku-deploy@v3.12.12
